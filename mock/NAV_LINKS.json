@@ -1,0 +1,30 @@
+{
+  "visible": [
+    {
+      "id": 1,
+      "title": "Reactions",
+      "link": "/reactions"
+    },
+    {
+      "id": 2,
+      "title": "Entertainment",
+      "link": "/entertainment"
+    },
+    {
+      "id": 3,
+      "title": "Sports",
+      "link": "/sports"
+    },
+    {
+      "id": 4,
+      "title": "Stickers",
+      "link": "/stickers"
+    },
+    {
+      "id": 5,
+      "title": "Artists",
+      "link": "/artists"
+    }
+  ],
+  "hidden": []
+}

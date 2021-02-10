@@ -1,0 +1,23 @@
+@import "variables";
+
+//STYLES
+@mixin a-default {
+  text-decoration: none;
+  color: $linkColor;
+}
+@mixin ul-default {
+  list-style-type: none;
+}
+
+
+//MEDIA
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}

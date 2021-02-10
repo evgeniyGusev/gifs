@@ -1,13 +1,5 @@
 <template>
-  <div class="container">
-    <div
-      v-for="gif in trendGifs"
-      :key="gif.id"
-    >
-      <h6>{{ gif.title }}</h6>
-      <img :src="gif.images.preview_gif.url" :alt="gif.title">
-    </div>
-  </div>
+  <h1>MAIN</h1>
 </template>
 
 <script>
