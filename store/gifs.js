@@ -1,4 +1,4 @@
-const API_KEY = '?api_key=CGjqcZbkSazZKtbADId22wKHu2QQYMWp';
+const API_KEY = 'CGjqcZbkSazZKtbADId22wKHu2QQYMWp';
 
 export const state = {
   gifs: {
@@ -13,9 +13,9 @@ export const mutations = {
 }
 
 export const actions = {
-  async FETCH_TRENDS({ commit }, data) {
+  async FETCH_TRENDS({ commit }) {
     try {
-      const response = await this.$axios.get(`v1/gifs/trending${API_KEY}`, data);
+      const response = await this.$axios.get(`v1/gifs/trending?api_key=${API_KEY}`);
 
       commit('SET_TREND_GIFS', response.data.data);
     } catch (e) {

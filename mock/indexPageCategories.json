@@ -3,14 +3,15 @@
     "id": 1,
     "title": "Trending",
     "icon": "trend-arrow.svg",
-    "link": "All The GIFs",
-    "linkText": "/trending"
+    "linkText": "All The GIFs",
+    "link": "/trending",
+    "gifs": "trend"
   },
   {
     "id": 2,
     "title": "Artists",
     "icon": "artists-light.svg",
-    "link": "All GIPHY Artists",
-    "linkText": "artists"
+    "linkText": "All GIPHY Artists",
+    "link": "/artists"
   }
 ]

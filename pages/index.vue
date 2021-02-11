@@ -5,6 +5,7 @@
       v-for="category in categories"
       :key="category.id"
       v-bind="category"
+      :gifs="gifs[category.gifs]"
     />
   </main>
 </template>
@@ -16,12 +17,18 @@ import { mapActions } from 'vuex';
 export default {
   name: 'Main',
 
+  created() {
+    this.$store.dispatch('gifs/FETCH_TRENDS');
+  },
+
   computed: {
     categories() {
       return CATEGORIES;
     },
-    trendGifs() {
-      return this.$store.state.gifs.gifs.trend;
+    gifs() {
+      return {
+        trend: this.$store.state.gifs.gifs.trend,
+      };
     },
   },
 
