@@ -1,37 +1,53 @@
 <template>
   <header>
-    <nuxt-link
-      to="/"
-      class="logo"
-    >
-      <img src="/ico/logo.svg" alt="giphyClone">
-    </nuxt-link>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li
-          v-for="link in NAV_LINKS.visible"
-          :key="link.id"
-          class="nav-item"
-        >
-          <nuxt-link
-            :to="link.link"
-            class="nav-link"
+    <section>
+      <nuxt-link
+        to="/"
+        class="logo"
+      >
+        <img src="/ico/logo.svg" alt="giphyClone">
+      </nuxt-link>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li
+            v-for="link in NAV_LINKS.visible"
+            :key="link.id"
+            class="nav-item"
           >
-            {{ link.title }}
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <div class="nav-link">
-            <span class="_dots">...</span>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <div class="control">
-      <button class="control-btn">Upload</button>
-      <button class="control-btn">Create</button>
+            <nuxt-link
+              :to="link.link"
+              class="nav-link"
+            >
+              {{ link.title }}
+            </nuxt-link>
+          </li>
+          <li class="nav-item">
+            <div class="nav-link">
+              <span class="_dots">...</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="control">
+        <button class="control-btn">Upload</button>
+        <button class="control-btn">Create</button>
+      </div>
+      <div class="user">
+        <div class="user-gif">
+          <img src="/img/user-eyes.gif" alt="user-eyes">
+        </div>
+        <div class="user-info">
+          user11
+        </div>
+        <div class="user-arrow">
+          &#9660;
+        </div>
+      </div>
+    </section>
+    <div class="input">
+      <input type="text" class="search" placeholder="Search All the GIFs">
+      <button class="search-btn" />
     </div>
-    <div class="user"></div>
   </header>
 </template>
 
@@ -50,11 +66,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
+section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 10px;
+  padding: 20px 0 15px;
 
   .logo {
     display: block;
@@ -86,12 +102,12 @@ header {
         .nav-link {
           position: relative;
           display: block;
-          padding: 8px 14px 4px 10px;
-          font-size: 15px;
-          font-weight: 600;
+          padding: 8px 18px 4px 14px;
+          font-size: 14px;
+          font-weight: 700;
           color: #fff;
           cursor: pointer;
-          
+
           &::after {
             content: '';
             position: absolute;
@@ -118,9 +134,68 @@ header {
   .control {
     .control-btn {
       @include button-default;
-      padding: 8.5px 16px;
+      padding: 10px 16px;
       background-color: #6157ff;
+      font-size: 15px;
+      cursor: pointer;
     }
+  }
+
+  .user {
+    height: 36px;
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(62, 62, 62);
+    cursor: default;
+
+    .user-gif {
+      width: 36px;
+      height: 100%;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .user-info {
+      padding: 8px 31px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .user-arrow {
+      color: #fff;
+    }
+  }
+}
+
+.input {
+  position: relative;
+  margin-bottom: 10px;
+
+  .search {
+    appearance: none;
+    width: 100%;
+    padding: 15px 0 15px 20px;
+    border: 0;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 18px;
+    color: $linkColor;
+    outline: none;
+  }
+
+  .search-btn {
+    @include button-default;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 52px;
+    background-image: url("/img/search-bg.png");
+    background-size: cover;
+    cursor: pointer;
   }
 }
 </style>

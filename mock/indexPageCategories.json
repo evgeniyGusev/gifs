@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Trending",
+    "icon": "trend-arrow.svg",
+    "link": "All The GIFs",
+    "linkText": "/trending"
+  },
+  {
+    "id": 2,
+    "title": "Artists",
+    "icon": "artists-light.svg",
+    "link": "All GIPHY Artists",
+    "linkText": "artists"
+  }
+]

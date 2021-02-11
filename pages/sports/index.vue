@@ -1,12 +1,12 @@
 <template>
-  <footer>
-    footer
-  </footer>
+  <main class="main">
+    <h1>SPORTS</h1>
+  </main>
 </template>
 
 <script>
 export default {
-  name: "TheFooter"
+  name: "SportsPage"
 }
 </script>
 
