@@ -8,6 +8,10 @@
 @mixin ul-default {
   list-style-type: none;
 }
+@mixin button-default {
+  border: none;
+  outline: none;
+}
 
 
 //MEDIA
