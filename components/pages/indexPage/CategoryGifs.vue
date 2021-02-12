@@ -20,7 +20,7 @@
           :key="i"
           class="slide"
         >
-          <app-gif
+          <app-gif-with-like
             :gif="gif"
           />
         </li>

@@ -1,10 +1,10 @@
 const API_KEY = 'CGjqcZbkSazZKtbADId22wKHu2QQYMWp';
 
-export const state = {
+export const state = () => ({
   gifs: {
     trend: [],
   }
-}
+});
 
 export const mutations = {
   SET_TREND_GIFS(state, payload) {
