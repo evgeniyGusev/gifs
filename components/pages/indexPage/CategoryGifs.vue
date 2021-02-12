@@ -7,13 +7,10 @@
         {{ title }}
       </h2>
     </div>
-    <nuxt-link
-      :to="link"
-      class="head-link"
-    >
-      {{ linkText }}
-      <span>&rsaquo;</span>
-    </nuxt-link>
+    <app-general-link
+      :link="link"
+      :link-text="linkText"
+    />
   </div>
   <div class="body">
     <ul class="list">
@@ -23,12 +20,9 @@
           :key="i"
           class="slide"
         >
-          <nuxt-link
-            to="/"
-            class="slide-link"
-          >
-            <img :src="gif.images.original.url" :alt="gif.title">
-          </nuxt-link>
+          <app-gif
+            :gif="gif"
+          />
         </li>
       </template>
     </ul>
@@ -83,21 +77,6 @@ section {
         margin-right: 10px;
       }
     }
-
-    .head-link {
-      display: block;
-      font-size: 15px;
-
-      span {
-        font-size: 31px;
-        line-height: 1px;
-        color: inherit;
-        position: relative;
-        top: 3px;
-        margin-left: 5px;
-        font-weight: 700;
-      }
-    }
   }
 
   .body {
@@ -112,15 +91,6 @@ section {
 
       .slide {
         margin-right: 6px;
-
-        .slide-link {
-          display: block;
-
-          img {
-            height: 140px;
-            width: auto;
-          }
-        }
       }
     }
   }

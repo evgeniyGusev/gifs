@@ -12,6 +12,7 @@
     "title": "Artists",
     "icon": "artists-light.svg",
     "linkText": "All GIPHY Artists",
-    "link": "/artists"
+    "link": "/artists",
+    "gifs": "artists"
   }
 ]
