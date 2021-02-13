@@ -137,7 +137,7 @@ section {
       padding: 10px 16px;
       background-color: #6157ff;
       font-size: 15px;
-      cursor: pointer;
+      cursor: not-allowed;
     }
   }
 
