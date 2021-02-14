@@ -19,6 +19,7 @@ export default {
 
   created() {
     this.$store.dispatch('gifs/FETCH_TRENDS');
+    this.$store.dispatch('gifs/FETCH_USERS');
   },
 
   computed: {
@@ -28,6 +29,7 @@ export default {
     gifs() {
       return {
         trend: this.$store.state.gifs.gifs.trend,
+        users: this.$store.state.gifs.users,
       };
     },
   },

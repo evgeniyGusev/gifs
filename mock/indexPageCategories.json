@@ -9,10 +9,10 @@
   },
   {
     "id": 2,
-    "title": "Artists",
+    "title": "Users",
     "icon": "artists-light.svg",
-    "linkText": "All GIPHY Artists",
-    "link": "/artists",
-    "gifs": "artists"
+    "linkText": "All GIPHY Users",
+    "link": "/users",
+    "gifs": "users"
   }
 ]

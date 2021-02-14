@@ -22,12 +22,17 @@
     >
       <template v-for="(gif, i) in gifs">
         <li
-          v-if="i < 41"
+          v-if="i < 41 && Object.keys(gif).length > 0"
           :key="i"
           class="slide"
         >
           <app-gif-with-like
+            v-if="title === 'Trending'"
             :gif="gif"
+          />
+          <app-gif-with-names
+            v-if="title === 'Users'"
+            :gif="gif.gif"
           />
         </li>
       </template>
@@ -89,7 +94,7 @@ export default {
         this.step -= 1;
       } else return false;
     },
-    
+
    goToNextSlides() {
       if (this.step < 4) {
         this.step += 1;
@@ -122,7 +127,6 @@ section {
   .body {
     position: relative;
     width: 100%;
-    height: 140px;
     overflow: hidden;
 
     .step-prev,
